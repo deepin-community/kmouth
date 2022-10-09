@@ -1,0 +1,553 @@
+kmouth (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:19:06 +0900
+
+kmouth (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Borrow minimal upstream signing key from k3b.
+  * Drop Kubuntu from maintainer name.
+  * Added myself to the uploaders.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 28 Apr 2021 10:27:35 +0900
+
+kmouth (4:20.12.0-1) unstable; urgency=medium
+
+  * New upstream release (20.12.0).
+  * Refresh copyright information.
+  * Bump Standards-Version to 4.5.1, no change required.
+  * Refresh upstream metadata.
+  * Update project homepage.
+  * Removed Eshat Cakar, Maximiliano Curia, Modestas Vainius from the
+    uploaders, thanks for your work on the package!
+  * Added myself to the uploaders.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 04 Jan 2021 14:36:08 +0100
+
+kmouth (4:20.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Remove commented out variables in rules.
+  * Add the configuration for the CI on salsa.
+  * Explicitly add the gettext build dependency.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 15 Aug 2020 08:41:05 +0200
+
+kmouth (4:20.04.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Aurélien COUDERC ]
+  * Switch watch URL to the new KDE release service URL.
+  * Borrow upstream signing key from K3b, and activate upstream signature
+    verification.
+  * New upstream release (20.04.2).
+  * Update build dependencies following the upstream build system:
+    - bump Qt to >= 5.9
+    - bump KDE Frameworks to >= 5.46
+    - switch extra cmake modules version to match frameworks
+  * Refresh copyright information.
+  * Add dependency to qtspeech5-flite-plugin or qtspeech5-speechd-plugin
+    otherwise kmouth cannot read out anything.
+  * Switch from dhmk to the dh sequencer:
+    - invoke the dh sequencer using the kf5 addon
+  * Drop migration rules for kde-l10n and dbgsym migrations, not required
+    anymore after 2 stable releases.
+  * Switch from debian/compat to the debhelper-compat build dependency.
+  * Bump debhelper compatibility level to 13.
+  * Build with hardening=+all build hardening flag.
+  * Bump Standards-Version to 4.5.0:
+    - add Rules-Requires-Root: no
+  * Update upstream metadata:
+    - drop deprecated Name field
+    - add Bug-* URLs
+    - switch source repository URLs from deprecated cgit to KDE Invent GitLab
+      platform
+  * Update project homepage URL to KDE applications website.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Wed, 17 Jun 2020 15:54:59 +0200
+
+kmouth (4:18.04.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release:
+    - switches to Qt5/KF5 (Closes: #874959)
+  * Update the build dependencies following the port to Frameworks:
+    - remove kde-sc-dev-latest, and kdelibs5-dev
+    - add extra-cmake-modules, qtbase5-dev, libkf5completion-dev,
+      libkf5config-dev, libkf5configwidgets-dev, libkf5coreaddons-dev,
+      libkf5crash-dev, libkf5doctools-dev, libkf5i18n-dev, libkf5kio-dev,
+      libkf5widgetsaddons-dev, libkf5xmlgui-dev, and libqt5texttospeech5-dev
+  * Use the right makefile class:
+    - use debian-qt-kde.mk v3
+    - bump the pkg-kde-tools build dependency to >= 0.15.16
+  * Use https for Format in copyright.
+  * Break/replace against kde-l10n that ships translations.
+  * Switch Vcs-* fields to salsa.debian.org.
+  * Bump the debhelper compatibility to 11:
+    - bump the debhelper build dependency to 11~
+    - bump compat to 11
+  * Bump Standards-Version to 4.1.4, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Tue, 08 May 2018 08:59:56 +0200
+
+kmouth (4:17.08.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Bump Standards-Version to 4.1.3, no changes required.
+  * Simplify watch file, and switch it to https.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 11 Jan 2018 09:34:42 +0100
+
+kmouth (4:16.08.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Stop forcing the local installation to debian/tmp, letting the package
+    directory as install place.
+    - remove kmouth.install, no more used now
+  * Remove not-installed file, no more used now.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 24 Aug 2016 18:57:19 +0200
+
+kmouth (4:15.08.0-2) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Install files to debian/tmp
+  * Migrate dbg package to automatic dbgsym
+
+  [ Maximiliano Curia ]
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 May 2016 20:24:17 +0200
+
+kmouth (4:15.08.0-1) unstable; urgency=medium
+
+  * New upstream release (15.08.0).
+  * Update install files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 19:11:03 +0200
+
+kmouth (4:14.12.2-1) experimental; urgency=medium
+
+  * Prepare Debian release.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 19 Feb 2015 10:16:31 +0100
+
+kmouth (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 08:51:38 -0800
+
+kmouth (4:14.12.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 15 Dec 2014 16:19:32 +0100
+
+kmouth (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release candidate
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 02 Dec 2014 21:36:37 -0800
+
+kmouth (4:14.11.95-0ubuntu1) vivid; urgency=medium
+
+  * Initial release for KDE applications 14.12 series
+   - Change maintainer to Debian/Kubuntu
+   - Fix Watch file applications locations
+   - Fix VCS for new kde-applications location
+  * Debian merge, no remaining changes.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 26 Nov 2014 16:27:34 +0000
+
+kmouth (4:4.14.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Oct 2014 05:35:10 -0700
+
+kmouth (4:4.14.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Mon, 22 Sep 2014 17:22:02 +0200
+
+kmouth (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Recommends jovie.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 22 Aug 2014 16:40:15 +0200
+
+kmouth (4:4.14.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 20 Aug 2014 13:14:35 +0200
+
+kmouth (4:4.13.97-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release RC
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Fri, 01 Aug 2014 16:56:32 +0200
+
+kmouth (4:4.13.95-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Wed, 30 Jul 2014 18:24:01 +0200
+
+kmouth (4:4.13.90-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Thu, 24 Jul 2014 23:18:13 +0200
+
+kmouth (4:4.13.2-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+  * Merge with Debian, remaining change:
+   - recomend on jovie
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 17 Jun 2014 10:41:54 +0100
+
+kmouth (4:4.12.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:23:56 +0200
+
+kmouth (4:4.12.2-1) experimental; urgency=medium
+
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:31:36 +0100
+
+kmouth (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 08 Nov 2013 13:00:04 +0100
+
+kmouth (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 07 Oct 2013 15:34:35 +0200
+
+kmouth (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 15:23:11 +0200
+
+kmouth (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump debhelper build-dep and compat to 9.
+  * Bump Standards-Version to 3.9.4.
+  * Update vcs fields.
+  * Add myself to uploaders.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 08:38:17 +0200
+
+kmouth (4:4.13.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream KDE Software Compilation release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Apr 2014 22:08:08 +0100
+
+kmouth (4:4.12.97-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 02 Apr 2014 11:32:25 +0200
+
+kmouth (4:4.12.95-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sun, 23 Mar 2014 12:34:08 +0100
+
+kmouth (4:4.12.90-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 19 Mar 2014 11:04:24 +0000
+
+kmouth (4:4.12.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Mar 2014 20:54:21 +0100
+
+kmouth (4:4.12.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 05 Feb 2014 00:06:42 +0000
+
+kmouth (4:4.12.1-0ubuntu1) trusty; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 16 Jan 2014 08:22:47 +0000
+
+kmouth (4:4.12.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Dec 2013 17:14:41 +0000
+
+kmouth (4:4.11.97-0ubuntu1) trusty; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 29 Nov 2013 13:15:23 +0000
+
+kmouth (4:4.11.95-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 25 Nov 2013 18:12:41 +0100
+
+kmouth (4:4.11.80-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sat, 23 Nov 2013 17:44:29 +0100
+
+kmouth (4:4.11.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Sep 2013 14:30:54 +0100
+
+kmouth (4:4.11.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 06 Sep 2013 22:26:39 +0100
+
+kmouth (4:4.11.0-0ubuntu1) saucy; urgency=low
+
+  [ Howard Chan ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 14 Aug 2013 00:21:13 +0100
+
+kmouth (4:4.10.97-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC 2 release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Jul 2013 19:41:30 +0100
+
+kmouth (4:4.10.95-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 19 Jul 2013 12:32:43 +0000
+
+kmouth (4:4.10.90-0ubuntu1) saucy; urgency=low
+
+  * New upstream bet release
+
+ -- Michał Zając <quintasan@kubuntu.org>  Fri, 28 Jun 2013 18:18:07 +0100
+
+kmouth (4:4.10.80-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 21 Jun 2013 01:25:33 +0100
+
+kmouth (4:4.10.4-0ubuntu1) saucy-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 07 Jun 2013 00:37:07 +0100
+
+kmouth (4:4.10.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+  * Merge with Debian, remaining change:
+   - recomend on jovie
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 07 May 2013 16:55:10 +0000
+
+kmouth (4:4.10.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump build-deps.
+
+ -- Sune Vuorela <sune@debian.org>  Tue, 09 Apr 2013 07:33:14 +0000
+
+kmouth (4:4.10.2-0ubuntu1) raring; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 31 Mar 2013 14:52:29 +0200
+
+kmouth (4:4.10.1-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream bugfix release
+  * Drop obsolete lintian-overrides file from kdeaccessibility
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Mar 2013 16:31:52 +0000
+
+kmouth (4:4.10.0-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 06 Feb 2013 11:58:24 +0000
+
+kmouth (4:4.9.98-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 18 Jan 2013 15:45:48 +0000
+
+kmouth (4:4.9.97-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 03 Jan 2013 22:38:44 +0100
+
+kmouth (4:4.9.95-0ubuntu1) raring; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Dec 2012 23:34:42 +0000
+
+kmouth (4:4.9.90-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Dec 2012 18:00:09 +0000
+
+kmouth (4:4.9.80-0ubuntu1) raring; urgency=low
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 19 Nov 2012 16:00:58 +0000
+
+kmouth (4:4.9.3-0ubuntu1) raring; urgency=low
+
+  * New upstream release (LP: #1074747)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 06 Nov 2012 22:38:33 +0100
+
+kmouth (4:4.9.2-0ubuntu1) quantal-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 02 Oct 2012 15:30:07 +0100
+
+kmouth (4:4.9.1-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Mon, 10 Sep 2012 18:34:59 +0530
+
+kmouth (4:4.9.0-0ubuntu1) quantal; urgency=low
+
+  * Use direct build-depends versions rather than kde-sc-dev-latest
+  * New upstream release
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 26 Jul 2012 22:28:37 +0100
+
+kmouth (4:4.8.90-0ubuntu1) quantal; urgency=low
+
+  * New upstream beta release.
+
+ -- Felix Geyer <debfx@ubuntu.com>  Mon, 11 Jun 2012 23:33:20 +0200
+
+kmouth (4:4.8.80-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 06 Jun 2012 16:32:50 +0100
+
+kmouth (4:4.8.4-3) unstable; urgency=low
+
+  * The "I missed the epoch" release.
+  * Update debian/copyright:
+    - Correct doc license to GFDL-NIV-1.2+.
+    - Add a comment to the doc license to explain why some keywords appear and
+      how they are expanded later.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Thu, 21 Jun 2012 13:42:04 -0300
+
+kmouth (4:4.8.2-0ubuntu1) precise; urgency=low
+
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 03 Apr 2012 08:51:55 +0000
+
+kmouth (4:4.8.1-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 04 Mar 2012 21:23:50 +0100
+
+kmouth (4:4.8.0-0ubuntu1) precise; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 20 Jan 2012 12:10:40 +0000
+
+kmouth (4:4.7.97-0ubuntu1) precise; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 05 Jan 2012 12:18:37 +0000
+
+kmouth (4:4.7.95-0ubuntu1) precise; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sat, 24 Dec 2011 22:21:51 +0100
+
+kmouth (4:4.7.90-0ubuntu1) precise; urgency=low
+
+  * Initial package
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 16 Dec 2011 15:44:26 +0000
+
+kmouth (4.8.4-2) unstable; urgency=low
+
+  * Add Breaks+Replaces to kmouth-dbg against kdeaccessibility-dbg.
+  * Improve kmouth-dbg's description.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Mon, 18 Jun 2012 13:38:15 -0300
+
+kmouth (4.8.4-1) unstable; urgency=low
+
+  [ Lisandro Damián Nicanor Pérez Meyer ]
+  * Initial packaging, split from kdeaccesibility.
+  * Update Standards-Version to 3.9.3, no changes needed.
+  * Add a watch file.
+  * Add myself to Uploaders.
+  * Create a -dbg package.
+  * Remove files that where listed for installation but are not present
+    anymore in the source tarball.
+
+ -- Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>  Sun, 17 Jun 2012 19:16:54 -0300
